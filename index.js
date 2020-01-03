@@ -19,7 +19,7 @@ class App extends Component {
       enLinks: ['Diario', 'Calendar', 'Netflix', 'Youtube', 'Batmud', 'Batwiki', 'Maps by Ggr', 'Age of exile maps', 'Weapon compare table', 'Reinc simulator', 'Radio planeta'],
       soLinks: ['Facebook', 'Gmail', 'Youtube'],
       neLinks: ['El comercio', 'Yle', 'Foreca', 'Peru 21'],
-      edLinks: ['Duolingo', 'Stackblitz', 'Glitch', 'GitHub', 'FreeCodeCamp'],
+      edLinks: ['Duolingo', 'Stackblitz', 'Glitch', 'GitHub', 'FreeCodeCamp', 'MondlyLanguages'],
       shows: "0000"
 
     };
@@ -86,6 +86,7 @@ class App extends Component {
       case "Glitch": openURL("http://glitch.com"); break;
       case "GitHub": openURL("http://github.com"); break;
       case "FreeCodeCamp": openURL("https://FreeCodeCamp.org");break;
+      case "MondlyLanguages": openURL("https://mondlylanguages.com");break;
       default: console.log("button in action not found..");
 
     } 
