@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Cagliostro');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+html {
+  
+    height: 100%;
+
+}
+body {
+  
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: navy;
+  background: linear-gradient(black, navy, darkgreen);
+
+}
+
+.b-ground {
+
+  position:absolute;
+  z-index:-1;
+  display:block;
+}
+
+.helloItem {
+
+  color: white;
+  text-align: center;
+  font-family: 'Cagliostro', sans-serif;
+  font-size: 45px;
+  margin: 40px 0px 10px 0px;
+  text-shadow: 0 0 4px #FFF;
+  z-index: 1;
+
+}
+
+.theClock {
+
+  opacity: 0.2
+
+}
+
+.menut {
+
+  text-align: center;
+  border-style: solid;
+  border-color: black;
+  border-radius: 13px;
+  color: white;
+  background-color:blue;
+  padding: 6px;
+  z-index: 1;
+
+}
+
+.menut:hover {
+
+  cursor: pointer;
+
+}
+
+@media (max-width: 600px) {
+    .menut {
+        font-size: 50%;
+    }
+}
+
+.stars {
+
+  color: white;
+  font-size: 10px;
+  margin: 30px 0px 0px 0px;
+  text-shadow: 0 0 14px yellowgreen;
+  transform:rotate(300deg);
+  -webkit-transform:rotate(300deg); 
+  z-index: 0;
+
+}
+
+.star1 {
+
+  position: relative;
+  float: left;
+ 
+}
+
+.star2 {
+
+  position: relative;
+  float: center;
+  left: 40px;
+
+}
+
+.star3 {
+
+  position: relative;
+  float: center;
+  left: 67px;
+}
+.star4 {
+
+  position: relative;
+  float: center;
+  left: 140px;
+
+}
+.star5 {
+
+  position: relative;
+  float: right;
+
+}
+
+#menuTexts {
+
+  margin: 10px 5px 10px 5px;
+
+}
+
+#linkTexts {
+
+  margin: 5px 5px 5px 5px;
+
+}
+
+.allLinks {
+
+  text-align: left;
+  color: yellow;
+  text-shadow: 5 8 14px yellowgreen;
+  width: 200px;
+
+}
+
+.allLinks:hover {
+
+  cursor: pointer;
+
+}
+
+.theClock {
+  
+  color: white;
+  text-shadow: 0 0 14px yellowgreen;
+  margin: 5px;
+  padding: 5px;
+
+}
