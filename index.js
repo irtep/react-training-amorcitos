@@ -18,7 +18,7 @@ class App extends Component {
       headers: ["Entertainment","Social media","News and weather", "Educational"],
       enLinks: ['Diario', 'Calendar', 'Netflix', 'Youtube', 'Batmud', 'Batwiki', 'Maps by Ggr', 'Age of exile maps', 'Weapon compare table', 'Reinc simulator', 'Radio planeta'],
       soLinks: ['Facebook', 'Gmail', 'Youtube'],
-      neLinks: ['El comercio', 'Yle', 'Foreca', 'Peru 21'],
+      neLinks: ['El comercio', 'Yle', 'Foreca', 'Peru 21', 'Time in Perú'],
       edLinks: ['Duolingo', 'Stackblitz', 'Glitch', 'GitHub', 'FreeCodeCamp', 'MondlyLanguages'],
       shows: "0000"
     };
@@ -76,28 +76,25 @@ class App extends Component {
       case "GitHub": openURL("http://github.com"); break;
       case "FreeCodeCamp": openURL("https://FreeCodeCamp.org");break;
       case "MondlyLanguages": openURL("https://mondlylanguages.com");break;
+      case "Time in Perú": openURL("https://irtep.net/Timezones/timezonet.php");break;
       default: console.log("button in action not found..");
     } 
   }  
 
   render() {
 
-    let centerPage = (
-            <div>
-            <Image />
-            </div>);
+    let centerPage = null;
     let targetState = this.state.enLinks;
 
       switch (this.state.shows) {
 
-        case "0000": centerPage = (<Clock/>); break;        
+        case "0000": centerPage = (<div><Clock/><br/><Image/></div>); break;        
         case "1000": targetState = this.state.enLinks; break;
         case "0100": targetState = this.state.soLinks; break; 
         case "0010": targetState = this.state.neLinks; break; 
         case "0001": targetState = this.state.edLinks; break; 
               
         default: console.log("state not found");
-
       }
 
       if (this.state.shows != "0000") {
@@ -113,36 +110,23 @@ class App extends Component {
                     title ={todo}
                     handleClick ={this.clickControl}
                   />
-
                       )
-
             })  
           );
-
       }
 
     return (
 
       <div className= "theApp">
-
         <div className= "b-ground">
-      
           <Stars/>
-  
         </div>
-        
         <div>
-        
           <Hello/>
-        
         </div>
-
         <br/>
-     
         <div>
-
           <center>
-
             { 
               this.state.headers.map(todo => {
             
@@ -153,14 +137,10 @@ class App extends Component {
                   title={todo}
                   handleClick={this.clickControl}
                 />
-
-                    )
-
-              }                     )
-
+                );
+              })
             }
                <br/> <br/> <br/>  
-
             {centerPage} 
           </center>
         </div>
