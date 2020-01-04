@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Hello from './Hello';
-import MenuHeaderItem from './MenuHeaderItem';
-import LinksItem from './LinksItem';
-import Stars from './Stars';
-import Clock from './Clock';
+import Hello from './components/Hello';
+import MenuHeaderItem from './components/MenuHeaderItem';
+import LinksItem from './components/LinksItem';
+import Stars from './components/Stars';
+import Clock from './components/Clock';
+import Image from './components/Image';
 import './style.css';
 
 class App extends Component {
 
   constructor() {
-    
     super();
 
     this.state = {
@@ -21,11 +21,9 @@ class App extends Component {
       neLinks: ['El comercio', 'Yle', 'Foreca', 'Peru 21'],
       edLinks: ['Duolingo', 'Stackblitz', 'Glitch', 'GitHub', 'FreeCodeCamp', 'MondlyLanguages'],
       shows: "0000"
-
     };
 
     this.clickControl = this.clickControl.bind(this)
-
   }
 
   clickControl(todo){
@@ -35,33 +33,24 @@ class App extends Component {
       var win = window.open(url, '_blank');
       
       win.focus();
-    
     }
 
     switch (todo) {
 
       case "Entertainment":
-
         this.setState({ shows : "1000" })
-
       break;
  
       case "Social media":
-
         this.setState({ shows : "0100" })
-
       break;
  
       case "News and weather":
-
         this.setState({ shows : "0010" })
-
       break;
 
       case "Educational":
-
         this.setState({ shows : "0001" })
-
       break;        
 
       case "Diario": openURL("http://irtep.net/diario"); break;
@@ -88,14 +77,15 @@ class App extends Component {
       case "FreeCodeCamp": openURL("https://FreeCodeCamp.org");break;
       case "MondlyLanguages": openURL("https://mondlylanguages.com");break;
       default: console.log("button in action not found..");
-
     } 
-    
   }  
 
   render() {
 
-    let centerPage = (<Clock/>);
+    let centerPage = (
+            <div>
+            <Image />
+            </div>);
     let targetState = this.state.enLinks;
 
       switch (this.state.shows) {
@@ -171,18 +161,12 @@ class App extends Component {
             }
                <br/> <br/> <br/>  
 
-            {centerPage}
-
+            {centerPage} 
           </center>
-
         </div>
-
       </div>
-
     );
-
   }
-
 }
 
 render(<App />, document.getElementById('root'));
