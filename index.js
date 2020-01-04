@@ -96,7 +96,6 @@ class App extends Component {
         default: console.log("state not found");
       }
 
-
       {/* if some menu is chosen, write that to centerPage variable */}
       if (this.state.shows != "0000") {
 
