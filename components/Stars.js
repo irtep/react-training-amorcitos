@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 class Stars extends Component {
 
+  constructor(props){
+    super(props);
+  }
   render() {
 
     return(
@@ -16,9 +19,7 @@ class Stars extends Component {
         
       </div>
     )
-
   }
-
 }
 
 export default Stars;

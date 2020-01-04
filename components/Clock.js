@@ -6,7 +6,6 @@ class Clock extends Component {
     
     super(props);
     this.state = {date: new Date()};
-
   }
 
   componentDidMount() {
@@ -14,23 +13,18 @@ class Clock extends Component {
     this.timerID = setInterval(
       () => this.tick(),
       1000
-    
     );
-  
   }
 
   componentWillUnmount() {
   
     clearInterval(this.timerID);
-  
   }
 
   tick() {
 
     this.setState({
-    
       date: new Date()
-    
     });
   
   }
@@ -40,15 +34,11 @@ class Clock extends Component {
     return (
  
       <div className= "theClock">
- 
-        <h2>{this.state.date.toLocaleTimeString()}</h2>
- 
+
+        <h2>{this.state.date.toLocaleTimeString()}</h2> 
       </div>
-
     );
-
   }
-
 }
 
 export default Clock;
