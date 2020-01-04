@@ -18,7 +18,7 @@ class App extends Component {
       headers: ["Entertainment","Social media","News and weather", "Educational"],
       enLinks: ['Diario', 'Calendar', 'Netflix', 'Youtube', 'Batmud', 'Batwiki', 'Maps by Ggr', 'Age of exile maps', 'Weapon compare table', 'Reinc simulator', 'Radio planeta'],
       soLinks: ['Facebook', 'Gmail', 'Youtube'],
-      neLinks: ['El comercio', 'Yle', 'Foreca', 'Peru 21', 'Time in Perú'],
+      neLinks: ['El Comercio', 'Yle', 'Foreca', 'Peru 21', 'Time in Perú'],
       edLinks: ['Duolingo', 'Stackblitz', 'Glitch', 'GitHub', 'FreeCodeCamp', 'MondlyLanguages'],
       shows: "0000"
     };
