@@ -26,7 +26,7 @@ class App extends Component {
     this.clickControl = this.clickControl.bind(this)
   }
 
-  clickControl(todo){
+  clickControl(clickedElement){
 
     function openURL(url) {
     
@@ -35,7 +35,7 @@ class App extends Component {
       win.focus();
     }
 
-    switch (todo) {
+    switch (clickedElement) {
 
       case "Entertainment":
         this.setState({ shows : "1000" })
@@ -86,37 +86,36 @@ class App extends Component {
     let centerPage = null;
     let targetState = this.state.enLinks;
 
+      {/* check first what menu is clicked*/}
       switch (this.state.shows) {
-
-        case "0000": centerPage = (<div><Clock/><br/><Image/></div>); break;        
+        case "0000": centerPage = (<div><Clock/><br/><Image/></div>); break;
         case "1000": targetState = this.state.enLinks; break;
         case "0100": targetState = this.state.soLinks; break; 
         case "0010": targetState = this.state.neLinks; break; 
         case "0001": targetState = this.state.edLinks; break; 
-              
         default: console.log("state not found");
       }
 
+
+      {/* if some menu is chosen, write that to centerPage variable */}
       if (this.state.shows != "0000") {
 
-          centerPage = (
+        centerPage = (
 
-            targetState.map(todo => {
-              
-                return (
-                                    
-                  <LinksItem
-                    key ={todo.id}
-                    title ={todo}
-                    handleClick ={this.clickControl}
-                  />
-                      )
-            })  
-          );
+          targetState.map(selectedMenu => {
+            return (                      
+              <LinksItem
+                key ={selectedMenu.id}
+                title ={selectedMenu}
+                handleClick ={this.clickControl}/>
+            )
+          })  
+        );
       }
 
     return (
 
+      /* background stars and big main header(Hello/) */
       <div className= "theApp">
         <div className= "b-ground">
           <Stars/>
@@ -127,20 +126,19 @@ class App extends Component {
         <br/>
         <div>
           <center>
+            { /* to center map all headers */ }
             { 
-              this.state.headers.map(todo => {
-            
-              return (
-              
-                <MenuHeaderItem
-                  key ={todo.id}
-                  title={todo}
-                  handleClick={this.clickControl}
-                />
+              this.state.headers.map(headerMade => {
+                return (
+                  <MenuHeaderItem
+                  key ={headerMade.id}
+                  title={headerMade}
+                  handleClick={this.clickControl}/>
                 );
               })
             }
                <br/> <br/> <br/>  
+            { /* section where comes stuff with centerPage variable */ }
             {centerPage} 
           </center>
         </div>
