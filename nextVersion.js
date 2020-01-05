@@ -1,5 +1,7 @@
 /*
-components:
+next version will be more "reactish", there will be 
+app component parenting these components:
+
 -background
   renders stars to background
 -header
