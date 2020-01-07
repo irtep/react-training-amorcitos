@@ -7,6 +7,7 @@ import Stars from './components/Stars';
 import Clock from './components/Clock';
 import Image from './components/Image';
 import './style.css';
+import { mainHeaders } from './arrays/arrays.js';
 
 class App extends Component {
 
@@ -14,7 +15,7 @@ class App extends Component {
     super();
 
     this.state = {
-      header: null
+      selectedMenu: null
     };
 
     this.clickControl = this.clickControl.bind(this)
@@ -31,10 +32,11 @@ class App extends Component {
   }  
 
   render() {
-
+    /* if selectedMenu is null, make clock and image*/
+    
     return (
 
-      /* background stars and big main header(Hello/) */
+      /* background stars  */
       <div className= "theApp">
         <div className= "b-ground">
           <Stars/>
@@ -46,18 +48,19 @@ class App extends Component {
         <br/>
         <div>
           <center>
-            { /* to center map all headers */ }
+            { /* to center: map all headers for top menu*/ }
             { 
-              this.state.headers.map(headerMade => {
+              mainHeaders.map(headerMade => {
                 return (
                   <MenuHeaderItem
-                  key ={headerMade.id}
-                  title={headerMade}
+                  key ={headerMade.name}
+                  title={headerMade.name}
                   handleClick={this.clickControl}/>
                 );
               })
             }
                <br/> <br/> <br/>  
+
             { /* section where comes stuff with centerPage variable */ }
             {centerPage} 
           </center>
