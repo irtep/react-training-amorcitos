@@ -16,22 +16,15 @@ class App extends Component {
     this.state = {
       selectedMenu: 'not selected'
     };
-/*
+
     this.clickControl = this.clickControl.bind(this)
- */
   }
-/*
+
   clickControl(clickedElement){
     console.log('cE ', clickedElement);
     this.setState({ selectedMenu: clickedElement});
-    function openURL(url) {
     
-      var win = window.open(url, '_blank');
-      
-      win.focus();
-    } 
   }  
-  */
 
   render() {
 
