@@ -16,7 +16,7 @@ class App extends Component {
     super();
 
     this.state = {
-      selectedMenu: null
+      selectedMenu: 'not selected'
     };
 
     this.clickControl = this.clickControl.bind(this)
@@ -33,15 +33,12 @@ class App extends Component {
   }  
 
   render() {
-    let centerPage = null;
-    /* if selectedMenu is null, make clock and image*/
-    this.state.selectedMenu === null ? centerPage = (<div><Clock/><br/><Image/></div>) : makeLinkMenu(this.state.selectedMenu);
 
     return (
 
-      /* background stars  */
       <div className= "theApp">
 
+        /* background stars  */
         <div className= "b-ground">
           <Stars/>
         </div>
@@ -51,9 +48,9 @@ class App extends Component {
           <Hello/>
         </div>
         
+        { /* center section of page*/ }
         <div>
           <center>
-            { /* to center: map all headers for top menu*/ }
             { 
               mainHeaders.map(theHeader => {
                 return (
@@ -64,10 +61,9 @@ class App extends Component {
                 );
               })
             }
-               <br/> <br/> <br/>  
-
+               <br/> <br/> <br/> 
             { /* section where comes stuff with centerPage variable */ }
-            {centerPage} 
+            <LinksItem selected= {this.state.selectedMenu}/> 
           </center>
         </div>
       </div>
