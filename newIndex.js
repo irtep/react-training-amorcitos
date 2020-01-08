@@ -8,6 +8,7 @@ import Clock from './components/Clock';
 import Image from './components/Image';
 import './style.css';
 import { mainHeaders } from './arrays/arrays.js';
+import { makeLinkMenu } from './functions/helpFunctions.js';
 
 class App extends Component {
 
@@ -32,29 +33,33 @@ class App extends Component {
   }  
 
   render() {
+    let centerPage = null;
     /* if selectedMenu is null, make clock and image*/
-    
+    this.state.selectedMenu === null ? centerPage = (<div><Clock/><br/><Image/></div>) : makeLinkMenu(this.state.selectedMenu);
+
     return (
 
       /* background stars  */
       <div className= "theApp">
+
         <div className= "b-ground">
           <Stars/>
         </div>
+
         <div>
         /* main header "amorcitos"*/
           <Hello/>
         </div>
-        <br/>
+        
         <div>
           <center>
             { /* to center: map all headers for top menu*/ }
             { 
-              mainHeaders.map(headerMade => {
+              mainHeaders.map(theHeader => {
                 return (
                   <MenuHeaderItem
-                  key ={headerMade.name}
-                  title={headerMade.name}
+                  key ={theHeader.name}
+                  title={theHeader.name}
                   handleClick={this.clickControl}/>
                 );
               })
