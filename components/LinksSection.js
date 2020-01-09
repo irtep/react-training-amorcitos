@@ -19,7 +19,10 @@ class LinksSection extends Component {
     if (this.props.selected === 'not selected') {
 
       return(
-        <div><Clock/><br/><Image/></div>
+        <div><Clock/><br/><Image/>
+        <br/><br/>
+        <LinkItem title= "Google" url= "https://www.google.com"/>
+        </div>
       )
     } else {
       /* if user clicked, show that menu */
