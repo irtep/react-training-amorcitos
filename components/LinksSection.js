@@ -14,36 +14,25 @@ class LinksSection extends Component {
   }
 
   render() {
-
+    
+    /*if user haven't clicked anything yet, show clock and image*/
     if (this.props.selected === 'not selected') {
+
       return(
         <div><Clock/><br/><Image/></div>
       )
     } else {
+      /* if user clicked, show that menu */
       const findMenu = this.props.arrays.filter( menu => this.props.selected === menu.name);
+      const allLinks = findMenu[0].links.map( i => <li><LinkItem title= {i.name} url= {i.url}/></li>)
 
       return(
-        <div><LinkItem url= "https//wwww.google.com" title= "terve" key= "jes"/></div>
+        <ul>
+        {allLinks}
+        </ul>
       )
-
     }
   }
 }
 
 export default LinksSection;
-
-/*
-
-      const findMenu = this.props.arrays.filter( menu => this.props.selected === menu.name);
-
-      findMenu[0].links.map( (linkOnCase, idx) => {
-        
-        return(
-          <LinkItem
-          url = {linkOnCase.url}
-          title = {linkOnCase.name}
-          key = {idx}
-          />
-        )
-      });
- */
