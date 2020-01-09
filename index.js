@@ -56,8 +56,8 @@ class App extends Component {
                 );
               })
             }
-               <br/> <br/> <br/> 
-
+            
+            <br/> <br/> <br/> 
             { /* section where comes stuff with centerPage variable */ }
             <LinksSection 
             selected= {this.state.selectedMenu}

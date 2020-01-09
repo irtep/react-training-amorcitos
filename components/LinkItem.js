@@ -8,13 +8,9 @@ class LinkItem extends Component {
   }
 
   goToUrl(menuForShow){
-    // doesn't seem to work yet...
-    function openURL(url) {
-    
-      const win = window.open(url, '_blank');
+      const win = window.open(this.props.url, '_blank');
       
       win.focus();
-    }
   }
 
   render() { 
