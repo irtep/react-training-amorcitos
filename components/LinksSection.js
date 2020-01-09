@@ -22,6 +22,20 @@ class LinksSection extends Component {
     } else {
       const findMenu = this.props.arrays.filter( menu => this.props.selected === menu.name);
 
+      return(
+        <div><LinkItem url= "https//wwww.google.com" title= "terve" key= "jes"/></div>
+      )
+
+    }
+  }
+}
+
+export default LinksSection;
+
+/*
+
+      const findMenu = this.props.arrays.filter( menu => this.props.selected === menu.name);
+
       findMenu[0].links.map( (linkOnCase, idx) => {
         
         return(
@@ -32,8 +46,4 @@ class LinksSection extends Component {
           />
         )
       });
-    }
-  }
-}
-
-export default LinksSection;
+ */
