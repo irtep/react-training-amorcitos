@@ -17,7 +17,9 @@ class LinkItem extends Component {
     return (
       
     <div className= "linksMenu allLinks" onClick={() => this.goToUrl(this.props.url)}>
+
         <i className= "fa fa-caret-right" /> <span id= "linkTexts">{this.props.title} <br/></span>
+        
     </div>
     )
   }
