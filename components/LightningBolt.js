@@ -37,4 +37,4 @@ animation-iteration-count: 1;
   }
 }
 
-export default Stars;
+export default LightningBolt;
