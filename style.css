@@ -139,34 +139,18 @@ body {
 }
 
 @keyframes colorChange {
-    from {
-        color: var(--colorFrom);
-    }
-    to {
-        color:var(--colorTo);
-    }
+    from { color: var(--colorFrom); }
+    to { color:var(--colorTo); }
 }
 @-moz-keyframes colorChange { /* Firefox */
-    from {
-        color: var(--colorFrom);
-    }
-    to {
-        color: var(--colorTo);
-    }
+    from { color: var(--colorFrom); }
+    to { color: var(--colorTo); }
 }
 @-webkit-keyframes colorChange { /* Safari and Chrome */
-    from {
-        color: var(--colorFrom);
-    }
-    to {
-        color: var(--colorTo);
-    }
+    from {color: var(--colorFrom); }
+    to {color: var(--colorTo);  }
 }
 @-o-keyframes colorChange { /* Opera */
-    from {
-        color: var(--colorFrom);
-    }
-    to {
-        color: var(--colorTo);
-    }
+    from { color: var(--colorFrom); }
+    to { color: var(--colorTo); }
 }
