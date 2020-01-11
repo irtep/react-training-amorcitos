@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cagliostro');
+@import url('https://fonts.googleapis.com/css?family=Cagliostro|Chicle|Indie+Flower');
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
@@ -11,7 +11,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background: navy;
-  background: linear-gradient(black, navy, darkgreen);
+  background: linear-gradient(black, navy, purple);
 }
 
 .b-ground {
@@ -43,10 +43,12 @@ body {
   background-color:blue;
   padding: 6px;
   z-index: 1;
+  transition: 1.0s;
 }
 
 .menut:hover {
   cursor: pointer;
+  background-color: purple;
 }
 
 @media (max-width: 600px) {
@@ -105,10 +107,14 @@ body {
   text-shadow: 5 8 14px yellowgreen;
   width: 300px;
   font-size: 26px;
+  transition: 1.0s;
 }
 
 .allLinks:hover {
   cursor: pointer;
+  font-family: chicle;
+  color: red;
+  letter-spacing: 2px;
 }
 
 .theClock {
@@ -121,4 +127,46 @@ body {
 .smallFoto {
   width: 200px;
   border-radius: 5px;
+}
+
+/* Animations */
+.fadingIn {
+  --colorFrom: navy;
+  --colorTo: white;
+   -moz-animation: colorChange 6s; /* Firefox */
+   -webkit-animation: colorChange 6s; /* Safari      and Chrome */
+   -o-animation: colorChange 6s; /* Opera */
+}
+
+@keyframes colorChange {
+    from {
+        color: var(--colorFrom);
+    }
+    to {
+        color:var(--colorTo);
+    }
+}
+@-moz-keyframes colorChange { /* Firefox */
+    from {
+        color: var(--colorFrom);
+    }
+    to {
+        color: var(--colorTo);
+    }
+}
+@-webkit-keyframes colorChange { /* Safari and Chrome */
+    from {
+        color: var(--colorFrom);
+    }
+    to {
+        color: var(--colorTo);
+    }
+}
+@-o-keyframes colorChange { /* Opera */
+    from {
+        color: var(--colorFrom);
+    }
+    to {
+        color: var(--colorTo);
+    }
 }
