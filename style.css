@@ -113,7 +113,7 @@ body {
 .allLinks:hover {
   cursor: pointer;
   font-family: chicle;
-  color: red;
+  color: darkgreen;
   letter-spacing: 2px;
 }
 
@@ -131,7 +131,7 @@ body {
 
 /* Animations */
 .fadingIn {
-  --colorFrom: navy;
+  --colorFrom: black;
   --colorTo: white;
    -moz-animation: colorChange 6s; /* Firefox */
    -webkit-animation: colorChange 6s; /* Safari      and Chrome */
