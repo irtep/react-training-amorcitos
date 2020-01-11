@@ -10,7 +10,7 @@ class helloItem extends Component {
 
     return(
 
-      <div className= "helloItem">
+      <div className= "helloItem fadingIn">
         <strong>
           AMORCITOS
         </strong>

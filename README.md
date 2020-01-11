@@ -1,4 +1,4 @@
 # react-training-amorcitos
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-training-amorcitos)
-My react training portal
+My portal, that i use also to train react/css.
