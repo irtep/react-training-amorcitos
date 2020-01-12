@@ -46,7 +46,9 @@ export const mainHeaders = [
       { name: "Glitch", url: "http://glitch.com" },
       { name: "GitHub", url: "http://github.com" },
       { name: "FreeCodeCamp", url: "https://FreeCodeCamp.org" },
-      { name: "MondlyLanguages", url: "https://mondlylanguages.com" }
+      { name: "MondlyLanguages", url: "https://mondlylanguages.com" },
+      { name: "Caped mud client", url: "http://capedclient-v2.glitch.me/" },
+      { name: "Google maps", url: "https://maps.google.com" }
     ]
   }
 ];
