@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { callDice } from '../functions/helpFunctions.js';
+import React, { Component } from "react";
+import { callDice } from "../functions/helpFunctions.js";
 
 // randomize one of the queen images:
 const queens = [
-  'https://irtep.net/queen1.jpg',
-  'https://irtep.net/queen2.jpg',
-  'https://irtep.net/queen3.jpg'
+  "https://irtep.net/queen1.jpg",
+  "https://irtep.net/queen2.jpg",
+  "https://irtep.net/queen3.jpg"
 ];
 
-const imageRandomized = queens[callDice(3)-1];
+const imageRandomized = queens[callDice(3) - 1];
 
 class Image extends Component {
   constructor(props) {
@@ -17,10 +17,10 @@ class Image extends Component {
 
   render() {
     return (
-    <div>
-      <img className= "smallFoto" src= {imageRandomized} alt= "queen1"/>
-    </div>
-    )
+      <div>
+        <img className="smallFoto" src={imageRandomized} alt="queen1" />
+      </div>
+    );
   }
 }
 

@@ -1,21 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class helloItem extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
   }
 
   render() {
-
-    return(
-
-      <div className= "helloItem fadingIn">
-        <strong>
-          AMORCITOS
-        </strong>
+    return (
+      <div className="helloItem fadingIn">
+        <strong>AMORCITOS</strong>
       </div>
-    )
+    );
   }
 }
 
