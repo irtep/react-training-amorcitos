@@ -7,7 +7,7 @@ class LinkItem extends Component {
     this.goToUrl = this.goToUrl.bind(this);
   }
 
-  goToUrl(menuForShow){
+  goToUrl(){
       const win = window.open(this.props.url, '_blank');
       
       win.focus();
@@ -16,7 +16,7 @@ class LinkItem extends Component {
   render() { 
     return (
       
-    <div className= "linksMenu allLinks" onClick={() => this.goToUrl(this.props.url)}>
+    <div className= "linksMenu allLinks" onClick={() => this.goToUrl()}>
 
         <i className= "fa fa-caret-right" /> <span id= "linkTexts">{this.props.title} <br/></span>
         
