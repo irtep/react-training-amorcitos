@@ -48,7 +48,14 @@ export const mainHeaders = [
       { name: "FreeCodeCamp", url: "https://FreeCodeCamp.org" },
       { name: "MondlyLanguages", url: "https://mondlylanguages.com" },
       { name: "Caped mud client", url: "http://capedclient-v2.glitch.me/" },
-      { name: "Google maps", url: "https://maps.google.com" }
+      { name: "Google maps", url: "https://maps.google.com" },
+      { name: "Warmachine University", url: "https://warmachineuniversity.com/mw/index.php/Main_Page" },
+      { name: "Caped Client 2", url: "https://capedclient-v2.glitch.me/" },
+      { name: "Horder Help", url: "https://hordeshelp.glitch.me/" }
     ]
   }
 ];
+/*
+template for creating links:
+{ name: "Horder Help", url: "https://hordeshelp.glitch.me/" }
+*/
