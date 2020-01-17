@@ -50,7 +50,7 @@ export const mainHeaders = [
       { name: "Caped mud client", url: "https://capedclient-v2.glitch.me/" },
       { name: "Google maps", url: "https://maps.google.com" },
       { name: "Warmachine University", url: "https://warmachineuniversity.com/mw/index.php/Main_Page" },
-      { name: "Horder Help", url: "https://hordeshelp.glitch.me/" }
+      { name: "Hordes Help", url: "https://hordeshelp.glitch.me/" }
     ]
   }
 ];
